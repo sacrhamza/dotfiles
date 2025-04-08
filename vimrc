@@ -5,20 +5,27 @@ set number
 
 colorscheme gruvbox
 
-" set the background
 set background=dark
 
+" Always highlight search results
+"set hlsearch
+set incsearch
+" Basic color customization (GUI/terminal)
+"highlight Search ctermfg=Black ctermbg=Yellow guifg=#000000 guibg=#FFFF00
 
+function! SetFiletypeMacro()
+	if &filetype == 'sh'
+		let @c = '0i#ji' 
+	else	
+		let @c = '0i//ji'
+	endif
+endfunction
 
-" Map /c to run macro on selected lines
-" vnoremap /c :<C-u>normal! gv@c<CR>
-
-" Automatically copy yanked text to the clipboard using xclip
-"  au TextYankPost * if v:event.operator ==# 'y' | execute 'w !copy' | endif
-
-
-
-let @c = '0i//ji'  
+augroup filetype_macros
+  autocmd!
+  autocmd FileType * call SetFiletypeMacro()
+  autocmd BufEnter * call SetFiletypeMacro()
+augroup END
 
 
 " Yank to system clipboard using xclip
