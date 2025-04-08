@@ -21,6 +21,7 @@ function! SetFiletypeMacro()
 	endif
 endfunction
 
+
 augroup filetype_macros
   autocmd!
   autocmd FileType * call SetFiletypeMacro()
