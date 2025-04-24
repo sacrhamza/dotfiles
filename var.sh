@@ -1,0 +1,10 @@
+export norm="bash ~/SCRIPTS/nor.sh"
+export PATH="${PATH}:/home/hsacr/.local/bin:${HOME}/SCRIPTS/"
+export SCRIPTS='cd ~/SCRIPTS'
+export LIBRARY_PATH=~/MY_LIBRARY:$LIBRARY_PATH
+export MAIL='hsacr@student.1337.ma'
+export TERMINAL='kitty'
+export C_INCLUDE_PATH="/home/hsacr/MY_LIBRARY/:$C_INCLUDE_PATH"
+export C_INCLUDE_PATH="/home/hsacr/MY_LIBRARY/include/:$C_INCLUDE_PATH"
+export CPATH="/home/hsacr/MY_LIBRARY/:${CPATH}"
+export PATH="$PATH:${HOME}/.cargo/bin/"

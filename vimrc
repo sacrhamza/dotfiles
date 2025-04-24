@@ -15,9 +15,9 @@ set incsearch
 
 function! SetFiletypeMacro()
 	if &filetype == 'sh'
-		let @c = '0i#ji' 
+		let @c = 'I#ji' 
 	else	
-		let @c = '0i//ji'
+		let @c = 'I//ji'
 	endif
 endfunction
 
