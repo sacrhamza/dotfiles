@@ -21,7 +21,10 @@ setup()
 
 	mkdir -p "$HOME/.vim/colors/"
 
-	ln -s "$CWD/gruvbox.vim" "$HOME/.vim/colors/gruvbox.vim"
+	if [ ! -f "$CWD/gruvbox.vim" ]
+	then
+		ln -s "$CWD/gruvbox.vim" "$HOME/.vim/colors/gruvbox.vim"
+	fi
 }
 
 setup
