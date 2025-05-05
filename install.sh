@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CWD=$(realpath .)
+CWD=$(dirname $(realpath "$0"))
 
 BACKUP_DIR="$HOME/.backup"
 
@@ -8,15 +8,20 @@ HOME_FILES=(bashrc alias.sh alias.tmp.sh var.sh tmux.conf inputrc)
 
 mkdir -p "$BACKUP_DIR"
 
-mv "$HOME/.bashrc" "$HOME/.alias.sh" "$HOME/.alias.tmp.sh" "$HOME/.var.sh" "$BACKUP_DIR"
+setup()
+{
+	for i in "${HOME_FILES[@]}"
+	do
+		if [ -f "$i" ]
+		then
+			mv "$i" "$BACKUP_DIR"
+		fi
+		ln -s "$CWD/$i" "$HOME/.$i"	
+	done
 
+	mkdir -p "$HOME/.vim/colors/"
 
-for i in "${HOME_FILES[@]}"
-do
-	#create symbolic link to dotfiles for every home file
-	ln -s "$CWD/$i" "$HOME/.$i"	
-done
+	ln -s "$CWD/gruvbox.vim" "$HOME/.vim/colors/gruvbox.vim"
+}
 
-mkdir -p "$HOME/.vim/colors/"
-
-ln -s "$CWD/gruvbox.vim" "$HOME/.vim/colors/gruvbox.vim"
+setup

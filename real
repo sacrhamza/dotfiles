@@ -1,0 +1,4 @@
+#!/bin/bash
+
+realpath "$0"
+echo $0
