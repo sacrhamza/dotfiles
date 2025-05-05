@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CWD=$(dirname "$0")
+CWD=$(realpath .)
 
 BACKUP_DIR="$HOME/.backup"
 
