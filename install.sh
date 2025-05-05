@@ -12,7 +12,7 @@ setup()
 {
 	for i in "${HOME_FILES[@]}"
 	do
-		if [ -f "$i" ]
+		if [ -f "$HOME/.$i" ]
 		then
 			mv "${HOME}/.$i" "$BACKUP_DIR"
 		fi
