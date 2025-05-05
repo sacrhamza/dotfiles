@@ -14,7 +14,7 @@ setup()
 	do
 		if [ -f "$i" ]
 		then
-			mv "${HOME}/$i" "$BACKUP_DIR"
+			mv "${HOME}/.$i" "$BACKUP_DIR"
 		fi
 		ln -s "$CWD/$i" "$HOME/.$i"	
 	done
