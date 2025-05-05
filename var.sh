@@ -8,6 +8,5 @@ export TERMINAL='kitty'
 export C_INCLUDE_PATH="/home/hsacr/MY_LIBRARY/:$C_INCLUDE_PATH"
 export C_INCLUDE_PATH="/home/hsacr/MY_LIBRARY/include/:$C_INCLUDE_PATH"
 export CPATH="/home/hsacr/MY_LIBRARY/:${CPATH}"
-export TOKEN="7678624851:AAEMk8yioZruPcQl9vJjwpCu1sk3xPOOrcI"
 export EDITOR=vim
 export TERM=xterm-256color
