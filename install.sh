@@ -4,7 +4,7 @@ CWD=$(realpath .)
 
 BACKUP_DIR="$HOME/.backup"
 
-HOME_FILES=(bashrc alias.sh alias.tmp.sh var.sh tmux.conf input.rc)
+HOME_FILES=(bashrc alias.sh alias.tmp.sh var.sh tmux.conf inputrc)
 
 mkdir -p "$BACKUP_DIR"
 
