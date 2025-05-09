@@ -58,7 +58,7 @@ fi
 }
 
 work() {
-	if [[ $(tput cols) -ge 60 && $(echo "$PWD" | wc -c) -le 50 ]]
+	if [[ $(tput cols) -ge 60 && "${#PWD}" -le 50 ]]
 	then
 		printf "oneperson"
 	else
